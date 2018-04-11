@@ -46,6 +46,7 @@ let checkInventory = (item, purchaseQuantity) => {
             executePurchase(item, res[0].price, res[0].quantity,purchaseQuantity);
         } else {
             console.log('Sorry! We do not have enough in stock to complete your order.')
+            setTimeout(startProgram, 1500);
         }
     })
 }
