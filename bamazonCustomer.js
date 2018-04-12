@@ -35,7 +35,6 @@ let getInput = () => {
 
 let checkInventory = (item, purchaseQuantity) => {
     let query = connection.query(`SELECT * FROM products WHERE id = '${item}'`, function (err, res) {
-        console.log(res);
         if (err) throw err;
         else if (res[0].quantity >= purchaseQuantity) {
             console.log('Purchase successful!');
